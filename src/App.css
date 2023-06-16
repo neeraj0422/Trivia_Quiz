@@ -1,38 +1,154 @@
-.App {
+/* App.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4a4a4a;
+  font-size: 36px;
+}
+
+.question {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.options button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  color: #4a4a4a;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.options button:hover {
+  background-color: #f2f2f2;
+}
+
+.correct {
+  background-color: #66bb6a !important;
+  color: #ffffff;
+  animation: blink 1s ease-in-out;
+}
+
+.incorrect {
+  background-color: #ef5350 !important;
+  color: #ffffff;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.celebration {
+  margin-top: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.celebration .giphy-embed {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.game-over {
+  margin-top: 20px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.game-over .giphy-embed {
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.game-over p {
+  font-size: 18px;
+  color: #4a4a4a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.scorecard {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.scorecard h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.scorecard p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.final-score {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f44336;
+  margin-top: 10px;
+}
+
+.next-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #f44336;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.next-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
