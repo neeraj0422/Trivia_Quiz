@@ -26,7 +26,7 @@ const App = () => {
       setShowCorrectGif(true);
     } else {
       setShowIncorrectGif(true);
-      if (score + 1 >= 3) {
+      if (score + 1 >= -3) {
         setGameOver(true);
       }
     }
