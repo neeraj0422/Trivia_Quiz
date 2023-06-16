@@ -125,7 +125,7 @@ const App = () => {
           ></iframe>
           <p>
             <a href="https://giphy.com/gifs/nhl-sports-hockey-fan-t3sZxY5zS5B0z5zMIz">
-              via GIPHY
+              
             </a>
           </p>
         </div>
@@ -133,7 +133,7 @@ const App = () => {
       {showIncorrectGif && (
         <div className="celebration">
           <iframe
-            src="https://giphy.com/embed/DDtc2pqbHPfdgUTh8d"
+            src="https://giphy.com/embed/9GJ34PEVM5JnCkfPPf"
             width="350"
             height="350"
             frameBorder="0"
@@ -142,8 +142,8 @@ const App = () => {
             title="Incorrect Answer"
           ></iframe>
           <p>
-            <a href="https://giphy.com/gifs/agt-nbc-season-16-americas-got-talent-DDtc2pqbHPfdgUTh8d">
-              via GIPHY
+            <a href="https://giphy.com/gifs/anupamkher-anupam-kher-the-big-sick-you-are-wrong-9GJ34PEVM5JnCkfPPf">
+              
             </a>
           </p>
         </div>
