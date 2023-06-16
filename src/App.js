@@ -26,7 +26,7 @@ const App = () => {
       setShowCorrectGif(true);
     } else {
       setShowIncorrectGif(true);
-      if (score + 1 >= 5) {
+      if (score + 1 >= 3) {
         setGameOver(true);
       }
     }
@@ -41,43 +41,38 @@ const App = () => {
     setCurrentQuestion((prevQuestion) => prevQuestion + 1);
     setShowCorrectGif(false);
     setShowIncorrectGif(false);
+    if (currentQuestion + 1 >= questions.length) {
+      setGameOver(true);
+    }
   };
 
   if (questions.length === 0) {
     return <div>Loading...</div>;
   }
 
-  if (currentQuestion >= questions.length || gameOver) {
+  if (gameOver) {
     return (
       <div className="container">
         <h1>Trivia Quiz</h1>
-        {gameOver ? (
-          <>
-            <div className="game-over">
-              <iframe
-                src="https://giphy.com/embed/26grAW5j9enCsY3p6"
-                width="350"
-                height="350"
-                frameBorder="0"
-                className="giphy-embed"
-                allowFullScreen
-              ></iframe>
-              <p className="game-over-text">
-                Game Over! Your Final Score
-                {/* <span className="score">{score}</span> */}
-              </p>
-            </div>
-            <div className="scorecard">
-              <h3>Final Score:</h3>
-              <p className="final-score">{score}</p>
-            </div>
-          </>
-        ) : (
-          <>
-            <h2>Quiz Completed!</h2>
-            <p>Your score: {score}</p>
-          </>
-        )}
+        <div className="game-over">
+          <iframe
+            src="https://giphy.com/embed/26grAW5j9enCsY3p6"
+            width="350"
+            height="350"
+            frameBorder="0"
+            className="giphy-embed"
+            allowFullScreen
+            title="Game Over"
+          ></iframe>
+          <p className="game-over-text">
+            Game Over! Your Final Score{' '}
+            <span className="score">{score}</span>
+          </p>
+        </div>
+        <div className="scorecard">
+          <h3>Final Score:</h3>
+          <p className="final-score">{score}</p>
+        </div>
       </div>
     );
   }
@@ -126,10 +121,11 @@ const App = () => {
             frameBorder="0"
             className="giphy-embed"
             allowFullScreen
+            title="Correct Answer"
           ></iframe>
           <p>
             <a href="https://giphy.com/gifs/nhl-sports-hockey-fan-t3sZxY5zS5B0z5zMIz">
-              
+              via GIPHY
             </a>
           </p>
         </div>
@@ -143,10 +139,11 @@ const App = () => {
             frameBorder="0"
             className="giphy-embed"
             allowFullScreen
+            title="Incorrect Answer"
           ></iframe>
           <p>
             <a href="https://giphy.com/gifs/agt-nbc-season-16-americas-got-talent-DDtc2pqbHPfdgUTh8d">
-              
+              via GIPHY
             </a>
           </p>
         </div>
