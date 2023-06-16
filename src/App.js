@@ -53,7 +53,7 @@ const App = () => {
   if (gameOver) {
     return (
       <div className="container">
-        <h1>Trivia Quiz</h1>
+        <h1>Trivia Quiz BY NRK</h1>
         <div className="game-over">
           <iframe
             src="https://giphy.com/embed/26grAW5j9enCsY3p6"
